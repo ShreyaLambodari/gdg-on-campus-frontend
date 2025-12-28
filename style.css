@@ -572,3 +572,89 @@ footer a {
   margin-left: 680px;
   align-items: center;
 }
+
+.gdg-navbar {
+  width: 100%;
+  height: 64px;
+  background-color: #4285F4;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.gdg-nav-content h4 {
+  color: white;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+#instagram,
+#linkedin,
+#about-btn,
+#events-btn {
+  position: fixed;
+  top: 10px;
+  background: white;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  z-index: 9999;
+}
+
+/* positions (desktop only) */
+#instagram { right: 12px; width: 40px; }
+#linkedin  { right: 60px; width: 40px; }
+#events-btn { right: 110px; width: 80px; color: #1a73e8; }
+#about-btn  { right: 200px; width: 80px; color: #1a73e8; }
+
+#instagram img,
+#linkedin img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+
+  /* Navbar stays clean */
+  .gdg-navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 6px;
+  }
+
+  /* Move buttons BELOW navbar */
+  #about-btn,
+  #events-btn,
+  #linkedin,
+  #instagram {
+    position: static;
+    margin: 4px;
+  }
+
+  /* Create button row */
+  body {
+    padding-top: 120px;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+  }
+}
